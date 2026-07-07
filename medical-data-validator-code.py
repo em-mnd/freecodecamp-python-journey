@@ -42,9 +42,9 @@ def find_invalid_records(patient_id, age, gender, diagnosis, medications, last_v
         'diagnosis': isinstance(diagnosis, str) or diagnosis is None,
         'medications': isinstance(medications, list) and all([isinstance(i, str) for i in medications]),
         'last_visit_id': isinstance(last_visit_id, str) and re.fullmatch('v\d+', last_visit_id, re.IGNORECASE),
-        
-
     }
+
+    return [key for key, value in constraints.items() if not value]
 
 def validate(data):
     is_sequence = isinstance(data, (list, tuple))
