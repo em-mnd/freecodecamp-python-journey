@@ -40,6 +40,8 @@ def find_invalid_records(patient_id, age, gender, diagnosis, medications, last_v
         'age': isinstance(age, int) and age >= 18,
         'gender': isinstance(gender, str) and gender.lower() in ('male', 'female')
         'diagnosis': isinstance(diagnosis, str) or diagnosis is None,
+        'medications': isinstance(medications, list) and [isinstance(i, str) for i in medications],
+        
     }
 
 def validate(data):
