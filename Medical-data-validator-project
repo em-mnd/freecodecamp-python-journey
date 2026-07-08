@@ -1,3 +1,9 @@
 # Medical Data Validator
 
 This project was completed while working through the freeCodeCamp Python curriculum.
+
+##July 8th 2026:
+"Step 44 passed, had to use double quotes after f (line 75) since i was already using single quotes, update the medical_records: change the last patient's age from 56 to 2 so that it would be inferior to 18 and the code wouldn't accept that (line 29, line 40, respectively)
+and hen the terminal showed the expected message:
+"Unexpected format 'age: 2' at position 3" which was the assignement's goal.
+Very interesting and put me into an hour long reflexion also had some help from the forum, people helped me see my mistakes especially with the quotation marks
