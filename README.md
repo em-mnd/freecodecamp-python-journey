@@ -1,5 +1,13 @@
-# freecodecamp-python-journey
+# python-journey
 
-Every workshop or certification project that I completed by following the lessons requirements.
-Keeping track of everything I learn as I continue the Python curriculum on the freeCodeCamp website so that I don't lose it r forget about it.
-Good way to keep logs of what I learn and a proof of my capacity to write code when following requirements.
+## About:
+
+My journey as a beginner developper learning python by following the freeCodeCamp python curriuculum but also making projects on my own.
+This repository keeps track of my progression as a developper and serves as a portfolio.
+
+## Table of Contents:
+
+- Medical Data Validator
+- User Configurator Manager
+- Calculator
+- And much more coming up.
