@@ -7,10 +7,10 @@ This calculator will offer basic operations : addition, substraction, division a
 
 ## Features
 
-- Addition (using the + sign)
-- Substraction (using the - sign)
-- Division (using the / sign)
-- Multiplication (using the * sign)
+- Addition
+- Substraction
+- Division
+- Multiplication
 
 ## What I learned
 
@@ -19,3 +19,7 @@ This calculator will offer basic operations : addition, substraction, division a
 - How to save user input
 - Keep track of user input
 - Use functions and adapt them to situations
+- Debug and add error handling
+- Think of different solutions
+- Use if, elif, else statements
+- Use for or while loop statements
