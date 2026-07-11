@@ -6,15 +6,29 @@ In this project, I will build a user configuration manager that will allow its u
 
 ## Features
 
-- Allows users to manage settings
+- Allows users to manage settings (adding, updating, deleting and viewing settings)
 
 ## Technologies
 
 - Python
 - Functions
 - Dictionaries along with key-value pairs
-- Regex
 
 ## What I learned
 
-Coming soon.
+- Tuple unpacking
+- return vs print
+- if/else logic
+- Building strings with newlines
+- Dictionary operations
+- Message formatting
+- Use of newlines
+
+## Notes
+
+I faced a lot of obstacles during this project:
+- I struggled to remember how to unpack tuples
+- I had a lot of typos that failed me a few steps
+- Worked with functions again so that was a good review
+- Learned the difference between print() and return
+- Used the f statement
