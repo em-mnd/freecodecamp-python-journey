@@ -25,7 +25,25 @@ elif operation == "div":
         while second_number == 0:
             print("Invalid input. Cannot divide by zero.")
             second_number = float(input("Choose a different second number: "))
-            if second_number == 0 or second_number != "":
+            if second_number == 0:
                 print("Please enter a valid number.")
         result = div(first_number, second_number)
 print(f"Result: {result}")
+
+
+#trying a different approach of error handling for the second number input
+
+if operation == "div":
+    while True:
+        try:
+            if second_number == 0:
+                raise ValueError("Cannot divide by zero.")
+            result = div(first_number, second_number)
+            break  # Exit the loop if no exception occurs
+        except ValueError as e:
+            print(e)
+            second_number = float(input("Choose a different second number: "))
+            if second_number == 0:
+                print("Please enter a valid number.")
+            else:
+                continue
