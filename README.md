@@ -10,4 +10,5 @@ This repository keeps track of my progression as a developper and serves as a po
 - Medical Data Validator
 - User Configurator Manager
 - Calculator
+- Student Life Manager
 - And much more coming up.
