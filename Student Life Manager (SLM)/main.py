@@ -1,11 +1,9 @@
-from tasks import tasks_menu
-
-def sln_main_menu():
+def slm_main_menu():
     print(input("Welcome to the Student Life Manager ! Please select a feature to use: \n1. Tasks\n2. Habits\n3. Deadlines\n4. Notes\n5. Budget\n6. Exit\n"))
     main_menu_choices = input(f"Enter your choice (1-6): ")
     if main_menu_choices not in ['1', '2', '3', '4', '5', '6']:
         print("Invalid choice. Please try again.")
-        sln_main_menu()
+        slm_main_menu()
     elif main_menu_choices == '1':
         print("You selected Tasks.")
         # Call the tasks feature function here
@@ -25,6 +23,9 @@ def sln_main_menu():
     elif main_menu_choices == '6':
         print("Exiting the Student Life Manager. Goodbye!")
         exit()
+
+
+
 
 
 # Display the main menu options to the user
