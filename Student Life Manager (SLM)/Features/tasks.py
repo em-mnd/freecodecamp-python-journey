@@ -1,3 +1,5 @@
+from main import slm_main_menu
+
 # Everything related to tasks (add, remove, update, view, complete)
 
 # Here I store the task name, the notes according to tasks (details about the task),
@@ -6,42 +8,41 @@
 # I could filter completed tasks but that is for later.
 
 def tasks_menu():
-    print(input("Welcome to the Tasks feature! Please select an option: \n1. Add Task\n2. Remove Task\n3. Update Task\n4. View Tasks\n5. Exit\n"))
-    tasks_menu_choices = input(f"Enter your choice (1-5): ")
-    if tasks_menu_choices not in ['1', '2', '3', '4', '5']:
-        print("Invalid choice. Please try again.")
-        tasks_menu()
-    elif tasks_menu_choices == '1':
-        add_task()
-    elif tasks_menu_choices == '2':
-        remove_task()
-    elif tasks_menu_choices == '3':
-        update_task()
-    elif tasks_menu_choices == '4':
-        view_tasks()
-    elif tasks_menu_choices == '5':
-        print("Exiting the Tasks feature. Returning to main menu.")
-        exit()
-        slm_main_menu()
+    while True:
+        input("Welcome to the Tasks feature! Please select an option: \n1. Add Task\n2. Remove Task\n3. Update Task\n4. View Tasks\n5. Exit\n")
+        tasks_menu_choices = input(f"Enter your choice (1-5): ")
+        if tasks_menu_choices not in ['1', '2', '3', '4', '5']:
+            print("Invalid choice. Please try again.")
+            tasks_menu()
+        elif tasks_menu_choices == '1':
+            add_task()
+        elif tasks_menu_choices == '2':
+            remove_task()
+        elif tasks_menu_choices == '3':
+            update_task()
+        elif tasks_menu_choices == '4':
+            view_tasks()
+        elif tasks_menu_choices == '5':
+            print("Exiting the Tasks feature. Returning to main menu.")
+            slm_main_menu()
 
 tasks_list = []
 
 def add_task():
-    print(input("Do you want to add a task? (y/n): "))
+    input("Do you want to add a task? (y/n): ")
     if input().lower() == 'y':
         task_name = input("Enter the task name: ")
         task_notes = input("Enter the task notes: ")
         task_priority = input("Enter the task priority (high/medium/low): ")
         tasks_list.append((task_name, task_notes, task_priority))
         print(f"Task added: {task_name}")
-    if input().lower() == 'n':
+    elif input().lower() == 'n':
         print("Returning to main menu.")
-        exit()
         slm_main_menu()
 
 
 def remove_task():
-    print(input("Do you want to remove a task? (y/n): "))
+    input("Do you want to remove a task? (y/n): ")
     if input().lower() == 'y':
         task_name = input("Enter the task name: ")
         for i, task in enumerate(tasks_list):
@@ -51,19 +52,18 @@ def remove_task():
                 break
         else:
             print("Task not found.")
-    if input().lower() == 'n':
+    elif input().lower() == 'n':
         print("Returning to main menu.")
-        exit()
         slm_main_menu()
 
 
 def update_task():
-    print(input("Do you want to update a task? (y/n): "))
+    input("Do you want to update a task? (y/n): ")
     if input().lower() == 'y':
         #Show the list of tasks to user, it's more user friendly if they can see and pick a number
         print("Here are the tasks you have:")
         for i, task in enumerate(tasks_list):
-            print(f"{i + 1}. {task[0] + 1}")
+            print(f"{i + 1}. {task[0]} - {task[1]} - {task[2]}")
         task_index = int(input("Enter the number of the task you want to update: ")) - 1
         if 0 <= task_index < len(tasks_list):
             task_name = input("Enter the new task name: ")
@@ -76,12 +76,11 @@ def update_task():
 
 
 def view_tasks():
-    print(input("Do you want to view your tasks? (y/n): "))
+    input("Do you want to view your tasks? (y/n): ")
     if input().lower() == 'n':
         print("Returning to main menu.")
-        exit()
         slm_main_menu()
-    if input().lower() == 'y':
+    elif input().lower() == 'y':
         if not tasks_list:
             print("No tasks found.")
         else:
