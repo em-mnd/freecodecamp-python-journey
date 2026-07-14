@@ -1,4 +1,4 @@
-from tasks import tasks_menu
+import tasks
 
 # Display the main menu options to the user
 
@@ -8,7 +8,7 @@ from tasks import tasks_menu
 # here there is no logic for other features, it's a gateway for them
 
 
-def sln_main_menu():
+def slm_main_menu():
     while True:
         main_menu_choices = input("Welcome to the Student Life Manager! Please select a feature to use: \n1. Tasks\n2. Habits\n3. Deadlines\n4. Notes\n5. Budget\n6. Exit\nEnter your choice (1-6): ")
         if main_menu_choices not in ['1', '2', '3', '4', '5', '6']:
@@ -17,7 +17,7 @@ def sln_main_menu():
         elif main_menu_choices == '1':
             print("You selected Tasks.")
             # Call the tasks feature function here
-            tasks_menu()
+            tasks.tasks_menu()
         elif main_menu_choices == '2':
             print("You selected Habits.")
             # Call the habits feature function here
@@ -33,4 +33,3 @@ def sln_main_menu():
         elif main_menu_choices == '6':
             print("Exiting the Student Life Manager. Goodbye!")
             exit()
-            

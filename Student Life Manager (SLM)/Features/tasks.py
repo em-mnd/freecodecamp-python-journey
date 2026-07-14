@@ -1,4 +1,4 @@
-from main import slm_main_menu
+import main
 
 # Everything related to tasks (add, remove, update, view, complete)
 
@@ -24,7 +24,7 @@ def tasks_menu():
             view_tasks()
         elif tasks_menu_choices == '5':
             print("Exiting the Tasks feature. Returning to main menu.")
-            slm_main_menu()
+            main.slm_main_menu()
 
 tasks_list = []
 
@@ -38,7 +38,7 @@ def add_task():
         print(f"Task added: {task_name}")
     elif input().lower() == 'n':
         print("Returning to main menu.")
-        slm_main_menu()
+        main.slm_main_menu()
 
 
 def remove_task():
@@ -54,7 +54,7 @@ def remove_task():
             print("Task not found.")
     elif input().lower() == 'n':
         print("Returning to main menu.")
-        slm_main_menu()
+        main.slm_main_menu()
 
 
 def update_task():
@@ -79,10 +79,9 @@ def view_tasks():
     input("Do you want to view your tasks? (y/n): ")
     if input().lower() == 'n':
         print("Returning to main menu.")
-        slm_main_menu()
+        main.slm_main_menu()
     elif input().lower() == 'y':
         if not tasks_list:
             print("No tasks found.")
         else:
             pass
-        # Need to know how ill display the tasks, it would look good in a table format.
