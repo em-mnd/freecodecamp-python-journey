@@ -49,7 +49,6 @@ def remove_task():
             if task[0] == task_name:
                 tasks_list.pop(i)
                 print(f"Task removed: {task_name}")
-                break
         else:
             print("Task not found.")
     elif input().lower() == 'n':
