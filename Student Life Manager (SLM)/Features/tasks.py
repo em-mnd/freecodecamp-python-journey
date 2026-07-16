@@ -32,10 +32,10 @@ def add_task():
     input("Do you want to add a task? (y/n): ")
     if input().lower() == 'y':
         task_name = input("Enter the task name: ")
-        task_notes = input("Enter the task notes: ")
+        task_desc = input("Enter the task description: ")
         task_priority = input("Enter the task priority (high/medium/low): ")
-        tasks_list.append((task_name, task_notes, task_priority))
-        print(f"Task added: {task_name}")
+        tasks_list.append((task_name, task_desc, task_priority))
+        print(f"Task added: {task_name}\n Description: {task_desc}\n Priority level: {task_priority}\n")
     elif input().lower() == 'n':
         print("Returning to main menu.")
         main.slm_main_menu()

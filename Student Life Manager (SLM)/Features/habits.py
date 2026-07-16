@@ -8,6 +8,8 @@ import main
 # I might filter completed habits for the day and then unmark them the next, but that is for later.
 # Weekly completion status might be a good idea to implement as well, but that is for later.
 
+habits_list = []
+
 def habits_menu():
     while True:
         input("Welcome to the Habits feature! Please choose an option: \n1. Add habit\n2. Remove habit\n3. Update habit\n4. View all habits\n5. Exit\n")
@@ -30,4 +32,17 @@ def habits_menu():
 def add_habit():
     input("Do you want to add an habit ? (y/n): ")
     if input().lower() == 'y':
-        habit_name = input("Enter habit name: ")
+        habit_name = input("Enter the habit name: ")
+        habit_priority = input("Enter the habit priority: ")
+        habits_list.append(habit_name, habit_priority)
+        print(f'Habit added: {habit_name}\n Priority: {habit_priority}\n')
+    elif input().lower() == 'n':
+        print('Returning to main menu.')
+        main.slm_main_menu()
+
+
+def remove_habit():
+    input("Do you want to remove an habit ? (y/n): ")
+    if input().lower() == 'y':
+        habit_name = input("Which habit do you want to delete ?: ")
+        pass
