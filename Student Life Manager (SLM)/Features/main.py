@@ -35,3 +35,4 @@ def slm_main_menu():
             print("Exiting the Student Life Manager. Goodbye!")
             exit()
 
+slm_main_menu()
