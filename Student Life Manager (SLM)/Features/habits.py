@@ -45,4 +45,29 @@ def remove_habit():
     input("Do you want to remove an habit ? (y/n): ")
     if input().lower() == 'y':
         habit_name = input("Which habit do you want to delete ?: ")
-        pass
+        for i, habit in enumerate(habits_list):
+            if habit[0] == habit_name:
+                habits_list.pop(i)
+                print(f'Habit removed: {habit_name}')
+        else:
+            print('Habit not found.')
+    elif input().lower() == 'n':
+        print("Returning to main menu.")
+        main.slm_main_menu
+
+
+def update_habit():
+    input('Do you want to update a task ? (y/n): ')
+    if input().lower() == 'y':
+        print("Here are the habits you have: ")
+        for i, habit in enumerate(habits_list):
+            print(f'{i + 1}. {habit[0:]}')
+        habit_index = int(input("Enter the number of the habit you want to update: "))
+        if 0 <= habit_index < len(habits_list):
+            habit_name = input("Enter the new habit name: ")
+            habit_priority = input("Enter the new priority level: ")
+            print(f"Habit updated: {habit_name}")
+        else:
+            print("Invalid habit number")
+
+
